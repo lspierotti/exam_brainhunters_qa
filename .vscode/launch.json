@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Pytest BDD",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "--gherkin-terminal-reporter",
+                "-vvvv",
+                "test_bdd/"  // Cambia a tu archivo de prueba BDD
+            ],
+            "justMyCode": true
+        },
+        {
+            "name": "Python: Pytest Functional",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-s",
+                "-vvvv",
+                "test_functional/"  // Esto ejecutará todos los tests en el directorio test_functional
+            ],
+            "justMyCode": true
+        }
+    ]
+}

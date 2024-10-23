@@ -1,0 +1,19 @@
+version: '3.3'
+networks:
+    api_network_github:
+        driver: bridge
+services:
+    bash:
+        environment:
+            - env=${ENVIRONMENT}
+            - trunner=jenkins
+        container_name: container_api_github
+        volumes:
+            - '/var/lib/jenkins/mycontainer:/mnt'
+            # - '/Users/lucaspierotti/Documents/main/propio/testing-personal/examen_pytest_brainhunters_lucas:/tests'
+        image: api_github
+        command:
+            pytest -vvvv -rs --reruns 2 /tests/ --junitxml=/mnt/reports/report_api_github.xml
+            # pytest -vvvv -s /tests/
+        networks:
+            - api_network_github

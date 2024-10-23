@@ -1,0 +1,8 @@
+pytest==8.3.3
+requests==2.28.1
+pytest-sugar==0.9.6
+pytest-repeat==0.9.1
+pytest-parallel==0.1.1
+pytest-rerunfailures==10.3
+pytest-order==1.0.1
+pytest-bdd==7.3.0
