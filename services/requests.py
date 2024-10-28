@@ -57,3 +57,20 @@ def patch_metadata_for_logged_user(path, headers, data):
     log.info("Testing endpoint: %s - for a logged-in user with: %s and headers: %s"%(url, data, headers))
     response = requests.request("PATCH", url, headers=headers, json = data)
     return response
+
+def post_create_gist(path, headers, data):
+    '''create a gist'''
+    endpoint = 'gists'
+    url = ''.join([path, endpoint])
+    log.info("create a gist")
+    response = requests.request("POST", url, headers = headers, json = data)
+    return response
+
+
+def get_gist_created(path, headers):
+    '''get a gist'''
+    endpoint = 'gists'
+    url = ''.join([path, endpoint])
+    log.info("create a gist")
+    response = requests.request("POST", url, headers = headers, json = data)
+    return response
